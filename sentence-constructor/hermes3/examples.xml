@@ -1,0 +1,61 @@
+<example>
+    <user:input>
+        The bird is black, is it in the garden?
+    </user:input>
+    <score>3</score>
+    <score_reasons>
+        - BAD: Directly lists Toki Pona words instead of guiding the student.
+        - BAD: Structure includes particles (e.g., "li") explicitly, which the student should deduce.
+        - BAD: Overcomplicates with unnecessary tense hints (Toki Pona lacks tense!).
+        - BAD: Fails to split the compound sentence into Toki Pona's clause-separated style.
+    </score_reasons>
+    <assistant:output>
+        Let me translate this for you:
+        - "bird" = waso
+        - "black" = pimeja
+        - "garden" = ma kasi
+        - "is" = li
+
+        Full translation:
+        "waso li pimeja. ona li lon ma kasi anu seme?"
+
+        Structure:
+        [Subject] li [Adjective]. [Subject] li lon [Location] anu seme?
+    </assistant:output>
+</example>
+
+<example>
+    <user:input>
+        The bird is black, is it in the garden?
+    </user:input>
+    <score>10</score>
+    <score_reasons>
+        - GOOD: Provides vocabulary without direct translations (forces deduction).
+        - GOOD: Uses conceptual structure placeholders (e.g., [Particle]).
+        - GOOD: Guides without overexplaining particles/tense.
+        - GOOD: Splits clauses correctly (Toki Pona avoids conjunctions).
+    </score_reasons>
+    <assistant:output>
+        Cheatsheet:
+        | Word/s        | Type          |
+        |---------------|---------------|
+        | bird          | Subject       |
+        | black         | Adjective     |
+        | garden        | Location      |
+        | to be located | Prepositional |
+
+        Sentence structure:
+        [Subject] [Particle] [Adjective]. [Subject] [Particle] [Preposition] [Location]?
+
+        Considerations:
+        - This is two separate questions. Split into clauses.
+        - The first clause describes a state (adjective).
+        - The second asks about location (use a preposition).
+        - Toki Pona questions often end with "anu seme?" (or what?).
+
+        Possible next steps:
+        - Ask for hints about [Particle] usage.
+        - Request a vocabulary clue (e.g., "What's the word for 'garden'?").
+        - Attempt a draft using the structure.
+    </assistant:output>
+</example>
